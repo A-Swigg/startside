@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startside</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="icon" href="../bilder/aron1.png">
+</head>
+
+<body>
+    <!-- navbar1 -->
+    <ul class="navbar1">
+        <li></li>
+        <li> <a href="https://Www.youtube.com" target="_blank">Youtube</a></li>
+        <li> <a href="https://www.netflix.com/browse" target="_blank">Netflix</a></li>
+        <li> <a href="https://fmoviesz.to/" target="_blank">Fmovies</a></li>
+        <li> <a href="https://myflixer.is/" target="_blank">MyFlixer</a></li>
+        <li> <a href="https://ww2.123moviesfree.net/" target="_blank">123Movies</a></li>
+        <li> <a href="https://soap2day.id/" target="_blank">Soap2Day</a></li>
+        <li> <a href="https://aniwatch.to/" target="_blank">AniWatch</a></li>
+        <li></li>
+    </ul>
+    <!--navbar1 slutt  -->
+    
+    <!-- notat -->
+    <div class="liste">
+        <input type="text" class="list-input" id="item" placeholder="Skriv">
+        <button id="ferdig" onclick="addItem()">Ferdig</button>
+        <button onclick="clearList()">Slett</button>
+        <div class="list" id="shopping-list">
+        <div class="list" id="shopping-list" onclick="toggleItem(event)"></div>
+        </div>
+    </div>
+    <!-- notat slutt -->
+
+    <!-- calc -->
+    <div class="calculator">
+        <input type="text" id="display" readonly>
+        <div class="buttons">
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button onclick="appendToDisplay('+')">+</button>
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button onclick="appendToDisplay('-')">-</button>
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button onclick="appendToDisplay('*')">*</button>
+            <button onclick="appendToDisplay('0')">0</button>
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="calculateResult()">=</button>
+            <button onclick="appendToDisplay('/')">/</button>
+        </div>
+    </div>
+    <!-- calc slutt -->
+
+    <!-- språkskifte -->
+    <div class="spark">
+        <label for="språk">🌐</label>
+        <select id="språk" name="Norsk/Engelsk">
+            <option value="Eng">Norsk/Engelsk</option>
+            <option value="spansk">Español</option>
+            <option value="oppned">uʍoᗡ ǝpᴉsdՈ</option>
+            <option value="china">中国人</option>
+            <option value="arabisk" class="arab">عربي</option>
+        </select>
+    </div>
+    <!-- språkskifte slutt -->
+
+    <!-- bilde -->
+    <img id="image" src="../bilder/aron1.png" alt="aron" img class="my-img">
+    <audio id="audio" src="../musikk/background_music.m4a"></audio>
+    <!-- bilde slutt -->
+    
+    <!--timer-->
+    <div class="countdown" id="countdown">
+        <span id="days">00</span>.
+        <span id="hours">00</span>.
+        <span id="minutes">00</span>.
+        <span id="seconds">00</span> Inntil tiden er inne
+    </div>
+    <!--timer slutt-->
+
+    <!-- navbar2 -->
+    <ul class="navbar2">
+        <li></li>
+        <li> <a href="https://sameyde-vgs.inschool.visma.no/#/app/dashboard" target="_blank">Visma</a></li>
+        <li> <a href="https://agder.itslearning.com/main.aspx?TextURL=CourseCards" target="_blank">Itslearning</a></li>
+        <li> <a href="https://ndla.no/utdanning/informasjonsteknologi-og-medieproduksjon/vg2" target="_blank">NDLA</a>
+        </li>
+        <li> <a href="https://web.snapchat.com/f14e4d08-08ff-5a1b-a87f-f21e20d718da" target="_blank">Snapchat</a></li>
+        <li> <a href="https://chat.openai.com/" target="_blank"> ChatBotAi</a></li>
+        <li></li>
+    </ul>
+    <!-- navbar2 slutt -->
+
+    <!-- script -->
+    <script src="../javascript/calc.js"></script>
+    <script src="../javascript/java.js"></script>
+    <!-- script slutt -->
+</body>
+
+</html>
