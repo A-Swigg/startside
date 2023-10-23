@@ -92,7 +92,7 @@ input.addEventListener("keypress", function(event) {
 //notat slutt
 
 // timer
-const countDownDate = new Date("October 20, 2023 00:00:00").getTime();
+const countDownDate = new Date("October 24, 2023 15:30:00").getTime();
 
 const countdown = setInterval(function() {
     const now = new Date().getTime();
