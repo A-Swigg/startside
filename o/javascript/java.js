@@ -42,10 +42,14 @@ function addItem() {
     if (itemName !== '') {
         const shoppingList = document.getElementById('shopping-list');
         const listItem = document.createElement('div');
+        const itemIndex = (JSON.parse(localStorage.getItem('shoppingItems')) || []).length;
+
         listItem.classList.add("list-item");
         listItem.textContent = itemName;
         console.log((JSON.parse(localStorage.getItem('shoppingItems')) || []).length)
-        listItem.dataset.id=(JSON.parse(localStorage.getItem('shoppingItems')) || []).length;
+        
+        listItem.dataset.id = itemIndex;
+        listItem.onclick = () => removeItem(listItem.dataset.id);
         shoppingList.appendChild(listItem);
 
         saveItems();
@@ -67,9 +71,12 @@ function loadItems() {
     
     savedItems.forEach(function(item, index) {
         const listItem = document.createElement('div');
+
         listItem.classList.add("list-item");
         listItem.innerHTML = item;
-        listItem.dataset.id=index;
+        listItem.dataset.id = index;
+        listItem.onclick = () => removeItem(listItem.dataset.id);
+
         shoppingList.appendChild(listItem);
     });
 }
@@ -81,6 +88,23 @@ function saveItems() {
     });
     localStorage.setItem('shoppingItems', JSON.stringify(items));
 }
+
+function removeItem(id) {
+    const shoppingList = document.getElementById('shopping-list');
+
+    Array.from(shoppingList.children).map(function(item) {
+        const itemId = item.dataset.id;
+
+        if (itemId == id) {
+            item.remove();
+            const savedItems = JSON.parse(localStorage.getItem('shoppingItems')) || [];
+
+            savedItems.slice(id, 1);
+            saveItems();
+        }
+    });
+}
+
 var input = document.getElementById("item");
 input.addEventListener("keypress", function(event) {
   if (event.key === "Enter") {
