@@ -116,7 +116,7 @@ input.addEventListener("keypress", function(event) {
 //notat slutt
 
 // timer
-const countDownDate = new Date("December 20, 2024 00:00:00").getTime();
+const countDownDate = new Date("December 20, 2024 00:00:01").getTime();
 
 const countdown = setInterval(function() {
     const now = new Date().getTime();
